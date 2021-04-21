@@ -1,0 +1,49 @@
+
+{% extends 'base.html'%}
+{% block content %}
+  <!-- ---Header---- -->
+
+  <!-- home seection -->
+  <div class="profile">
+    <div class="cover-img">
+    <img  src="{{ user.profile.cover_img.url }}" alt="">
+    </div>
+    <div class="profile-img">
+    <img  src="{{ user.profile.img.url }}" alt="">
+    </div>
+    <div class="name">
+      <h2>{{user.first_name}} {{user.last_name}}</h2>
+    </div>
+  </div>
+  {% for post in post %}
+  <a href="{% url 'post-detail' post.id %}">
+  <div class="post">
+    <div class="user-title">
+      <div class="user-img">
+        <img src="{{post.author.profile.img.url}}" alt="">
+      </div>
+      <div class="title">
+        <p>{{post.author.first_name}} {{post.author.last_name}}</p>
+        <p class="time">{{ post.date_posted }}</p>
+      </div>
+    </div>
+    <div class="article">
+      <p>{{post.content}}</p>
+    </div>
+  </a>
+    <div class="lik-com-count">
+      <span>15 likes</span>
+      <span>50 comments</span>
+    </div>
+    <div class="lik-com-btn">
+        <button type="button" name="button"><i class="far fa-thumbs-up"></i>Like</button>
+        <button type="button" name="button"><i class="far fa-comment"></i>Comment</button>
+    </div>
+  </div>
+
+ {% endfor %}
+  
+  <div class="space">
+
+  </div>
+  {% endblock %}

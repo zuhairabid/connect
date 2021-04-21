@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png '%}" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css '%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css '%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/settings.css '%}">
+</head>
+
+<body>
+
+
+  <nav>
+    <div class="menubar">
+      <ul>
+        <li><a href="{% url 'posts-home'%}"><i class="fas fa-home"></i></a></li>
+        <li><a href="#"><i class="far fa-envelope"></i></a></li>
+        <li><a href="{% url 'post-create'%}"><i class="far fa-plus-square"></i></a></li>
+        <li><a href="#"><i class="far fa-bell"></i></a></li>
+        <li  class="menu-profile"><a href="{% url 'profile'%}"><img src="{{user.profile.img.url}}" alt="profile"> </a></li>
+      </ul>
+    </div>
+
+  </nav>
+  <!-- ---Header---- -->
+
+    <header>
+    <div class="logo">
+      <img src="{% static 'images/logo.png '%}" alt="logo">
+    </div>
+    <span>CONNECT</span>
+<span class="menu-btn"><i class="fas fa-cog"></i></span>
+  </header>
+<div class="menu ">
+  <nav>
+    <ul>
+      <li><a href="{% url 'settings'%}" >Settings</a></li>
+      <li><a href="{% url 'logout'%}" >Logout</a></li>
+      <li><a href="{% url 'password_reset'%}">Change Password</a></li>
+    </ul>
+  </nav>
+</div>
+
+  <!-- ---Header---- -->
+
+  <!-- home seection -->
+
+  {% block content%}
+  {% endblock content%}
+  <div class="space">
+    
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="https://kit.fontawesome.com/d43fb7b338.js" crossorigin="anonymous"></script>
+<script>
+  
+
+const toggleButton = document.getElementsByClassName('menu-btn')[0]
+const settings = document.getElementsByClassName('menu')[0]
+
+
+
+toggleButton.addEventListener('click',()=>{
+  if(settings.classList.toggle('active')){
+    settings.style.marginLeft="0px"
+  }
+  else{
+    settings.style.marginLeft="-3000px"
+  }
+})
+
+
+</script>
+</body>
+</html>

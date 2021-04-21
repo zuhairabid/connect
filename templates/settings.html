@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block content%}
+<div class="settings">
+  <div class="set-title">
+    <h3>SETTINGS</h3>
+    <p>Update Profile Info</p>
+  </div>
+  
+  <form  method="POST" enctype="multipart/form-data">
+    {% csrf_token%}
+    {{u_form.first_name.label}}
+    {{u_form.first_name}}
+    {{u_form.last_name.label}}
+    {{u_form.last_name}}
+    {{u_form.username.label}}
+    {{u_form.username}}
+    {{u_form.email.label}}
+    {{u_form.email}}
+    {{p_form.img.label}}
+    {{p_form.img}}
+    {{p_form.cover_img.label}}
+    {{p_form.cover_img}}
+    <button type="submit">SAVE</button>
+  </form>
+</div>
+  <!-- ---Header---- -->
+
+{% endblock %}
+  

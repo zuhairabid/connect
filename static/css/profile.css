@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --fb-dark: #18191A;
+  --fb-nav-bg:#1c2227;
+  --fb-post:#333538;
+  --font:Poppins,sans-serif;
+  --font-color:white;
+  --light-grey:#3A3B3C;
+  --light-grey-2:#E4E6EB;
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:var(--font);
+  color:white;
+}
+body{
+  background: var(--fb-dark);
+}
+button{
+  background: var(--fb-post);
+  border: none;
+}
+input{
+  border-radius: 5%;
+  background:  var(--light-grey);
+  border:0px;
+
+}
+/* Menubar */
+.menubar{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: var(--fb-nav-bg);
+}
+.menubar ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.menubar li{
+  list-style-type: none;
+  padding: 10px;
+}
+.menubar a{
+  color: var(--light-grey-2);
+  font-size: 20px;
+  font-weight: 1;
+}
+.menu-profile{
+  margin-top: 4px;
+}
+.menu-profile img{
+  height:30px;
+  border-radius: 50%;
+
+}
+.space{
+  height: 70px;
+}
+/* Menubar */
+
+
+/* header */
+header{
+  position: sticky;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: var(--fb-nav-bg);
+}
+header .logo img{
+  height: 46px;
+  margin-right: 10px;
+}
+header span{
+  font-size: 25px;
+}
+/* header */
+
+/* post */
+.post{
+  background:var(--fb-post);
+  width:90%;
+  border-radius:3%;
+  margin: auto;
+  margin-top: 15px;
+  padding: 10px;
+}
+.user-title{
+  display: flex;
+}
+.user-img img{
+  margin-right: 10px;
+  border-radius: 50%;
+  height: 46px;
+}
+.user-title .time{
+  font-size: 13px;
+}
+.article{
+  text-align: left;
+  font-size: 15px;
+}
+.lik-com-count{
+  display:flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--light-grey);
+  margin-top: 5px;
+}
+.lik-com-btn{
+  padding: 10px;
+  border-top: 2px solid var(--light-grey);
+  border-bottom: 2px solid var(--light-grey);
+}
+.lik-com-btn button{
+  width: 45%;
+  background: var(--fb-post);
+  border: none;
+}
+.lik-com-btn button i{
+  margin-right:5px;
+}
+
+
+
+.profile{
+  width:90%;
+  margin: auto;
+  text-align: center;
+}
+
+.profile img{
+  width:100%
+}
+.profile .profile-img{
+  width:140px;
+  margin:auto;
+  margin-top: -60px;
+}
+.profile-img img{
+  border-radius: 50%;
+}
+
+.cover-img{
+  height:200px;
+  overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

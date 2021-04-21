@@ -1,0 +1,42 @@
+
+  <!-- ---Header---- -->
+
+  <!-- home seection -->
+{% extends 'base.html'%}
+ {%block content%}
+
+  <div class="post">
+    <div class="user-title">
+      <div class="user-img">
+        <img src="{{user.profile.img.url}}" alt="">
+      </div>
+      <div class="title">
+        <p>{{user.first_name}} {{user.last_name}}</p>
+   </div>
+ </div>
+ <form method="POST" >
+   {% csrf_token %}
+ 
+    <div class="article crt-post">
+      <p>{{form.content}}</p>
+      <button class="btn" type="submit">Save</button>
+      <button class="btn btn-2" onclick="goBack()">Cancel</button>
+    </div>
+    </form>
+<script>
+document.getElementsByTagName('textarea')[0].placeholder="Create Post"
+
+function goBack() {
+  window.history.back();
+}
+
+</script>
+
+
+
+
+
+  {%endblock%}
+  <!-- home seection -->
+
+ 

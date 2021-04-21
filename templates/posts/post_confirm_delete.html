@@ -1,0 +1,35 @@
+
+  <!-- ---Header---- -->
+
+  <!-- home seection -->
+{% extends 'base.html'%}
+ {%block content%}
+
+  <div class="post">
+    
+ <form method="POST" >
+   {% csrf_token %}
+ 
+    <div class="crt-post">
+      <h3>Are you sure you want to delete the post?</h3>
+      <button class="btn" type="submit">Yes</button>
+      <button class="btn btn-2" onclick="goBack()">Cancel</button>
+    </div>
+    </form>
+<script>
+
+
+function goBack() {
+  window.history.back();
+}
+
+</script>
+
+
+
+
+
+  {%endblock%}
+  <!-- home seection -->
+
+ 
